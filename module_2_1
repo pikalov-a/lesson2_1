@@ -1,0 +1,10 @@
+##Условная конструкция. Операторы if, elif, else #module_2_1
+first = int(input('Ввведите первое целое число: '))
+second = int(input('Ввведите второе целое число: '))
+third = int(input('Ввведите первое целое число: '))
+if first == second and second == third : ##добавка 3 условия излишняя
+    print(3) #имеется ввиду совпадений
+elif  first == second or second == third or first == third :
+     print(2)
+else:
+    print(0)
