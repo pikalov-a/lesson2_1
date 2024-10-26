@@ -1,0 +1,30 @@
+##Цикл for. Элементы списка. Полезные функции в цикле##module_2_4.py
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+primes = []
+not_primes = []
+#k=1
+for i in range(len(numbers)):
+#    k += 1
+    if numbers [i] == 1 : continue # пропускаем 1
+#    if numbers [i] == 2 : continue # пропускаем 2 эффективность метода зашкаливает
+    is_prime = True
+#    l = 2
+    for k in range(i):
+        if numbers[k] == 1: continue  # пропускаем 1
+#        if numbers[k] == 2: continue  # пропускаем 2 эффективность метода зашкаливает
+#    while k < i:
+        print(i, k)
+        print(numbers[i])
+        print(numbers[k])
+        if numbers[i] % numbers[k] != 0:
+            k += 1
+        else:
+            k += 1
+            is_prime = False
+            break
+    if is_prime:
+        primes.append(numbers [i])
+    else:
+        not_primes.append(numbers [i])
+    print(primes)
+    print(not_primes)
