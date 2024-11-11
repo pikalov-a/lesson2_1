@@ -1,0 +1,22 @@
+###  Дополнительное практическое задание по модулю     ##module_2_hard.py
+import random
+lst = [3, 4, 5, 6 , 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18, 19, 20]
+para_rand = random.sample(lst, 1)
+delit_1 = []
+for i in range(3, int(para_rand[0] / 2) + 1):
+    if para_rand[0] % i == 0:
+        delit_1.append(i)
+###создание 1 ключа
+key_1=''
+#добавляем часть от возможного делителя
+for i in range(len(delit_1)):
+    key_1 += '1'
+    key_1 += str(delit_1[i]-1)
+#добавляем часть от самого числа
+i=0
+while i < int((para_rand[0]+1)/2)-1:
+    i += 1
+    key_1 += str(i)
+    key_1 += str(para_rand[0] - i)
+print('Число из первой вставки: ', para_rand[0])
+print('Нужный пароль: ', key_1)
